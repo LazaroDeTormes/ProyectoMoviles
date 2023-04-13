@@ -7,12 +7,84 @@
     android:gravity="center">
 
 
+    <LinearLayout
+        android:id="@+id/pantallaTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
 
-    <ImageView
-        android:layout_width="200sp"
-        android:layout_height="200sp"
-        android:src="@drawable/logo"/>
+        <ImageView
+            android:id="@+id/imgTitulo"
+            android:layout_width="200sp"
+            android:layout_height="200sp"
+            android:src="@drawable/logo"/>
 
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/btnArtistas"
+            android:layout_width="120dp"
+            android:layout_height="130dp"
+            android:backgroundTint="@color/white"
+            android:layout_marginRight="15dp"
+            android:text="Artistas"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/btnAños"
+            android:layout_width="120dp"
+            android:layout_height="130dp"
+            android:backgroundTint="@color/white"
+            android:layout_toRightOf="@id/btnArtistas"
+            android:layout_marginLeft="15dp"
+            android:text="años"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/btnGeneros"
+            android:layout_width="270dp"
+            android:layout_height="130dp"
+            android:backgroundTint="@color/white"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/btnArtistas"
+            android:text="géneros"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/btnParaTi"
+            android:layout_width="120dp"
+            android:layout_height="130dp"
+            android:backgroundTint="@color/white"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_below="@id/btnGeneros"
+            android:text="para ti"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/btnAleatorio"
+            android:layout_width="120dp"
+            android:layout_height="130dp"
+            android:backgroundTint="@color/white"
+            android:layout_toRightOf="@id/btnParaTi"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/btnGeneros"
+            android:text="aleatorio"
+            android:textColor="@color/black"/>
+
+
+
+    </RelativeLayout>
 
 
 </LinearLayout>
