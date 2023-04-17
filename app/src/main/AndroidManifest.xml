@@ -15,6 +15,20 @@
         android:theme="@style/Theme.ProyectoMoviles"
         tools:targetApi="31">
         <activity
+            android:name=".pantallaAnhos"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".pantallaGeneros"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".artistas"
             android:exported="false">
             <meta-data
