@@ -3,6 +3,7 @@ package com.example.proyectomoviles;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +12,9 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+
+    private String nombrebbdd = "BBDD_Canciones";
+    private SQLiteDatabase sqldb;
 
 
     private ImageView imgTitulo;
@@ -46,6 +50,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnAnho.setOnClickListener(this);
         btnArt.setOnClickListener(this);
 
+        SQLiteOpenHelper openHelper =
+                new SQLiteOpenHelper(this, nombrebbdd, null, 1);
+
+        sqldb = openHelper.getWritableDatabase();
 
     }
 

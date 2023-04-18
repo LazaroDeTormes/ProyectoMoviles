@@ -11,6 +11,10 @@ public class Artista {
         this.imagen = imagen;
     }
 
+    public Artista(String nombre) {
+        this.nombre = nombre;
+    }
+
     public String getNombre() {
         return nombre;
     }
