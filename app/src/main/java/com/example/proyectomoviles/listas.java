@@ -3,9 +3,12 @@ package com.example.proyectomoviles;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
 
-public class artistas extends AppCompatActivity {
+import java.util.ArrayList;
+
+public class listas extends AppCompatActivity {
 
     private ListView lista;
 
@@ -17,6 +20,9 @@ public class artistas extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_artistas);
+
+
+        showCustomUI();
 
         lista = findViewById(R.id.listaArtistas);
 
@@ -30,5 +36,12 @@ public class artistas extends AppCompatActivity {
 
 
 
+    }
+
+    private void showCustomUI() {
+        View decorView = getWindow().getDecorView();
+        decorView.setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
     }
 }
