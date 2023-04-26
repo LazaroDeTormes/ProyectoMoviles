@@ -34,7 +34,7 @@ public class Adaptador extends ArrayAdapter {
         View fila = convertView;
         ViewHolder vh;
 
-        if (fila != null){
+        if (fila == null){
             LayoutInflater inflador = contexto.getLayoutInflater();
             fila = inflador.inflate(R.layout.row, null);
             vh = new ViewHolder();
@@ -56,7 +56,7 @@ public class Adaptador extends ArrayAdapter {
 
 
 
-        return super.getView(position, convertView, parent);
+        return fila;
     }
 
 

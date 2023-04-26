@@ -34,19 +34,23 @@ public class listas extends AppCompatActivity {
 
         lista = findViewById(R.id.listaArtistas);
 
+        String[] datosARecuperar = {"grupo"};
+
+        Cursor cursor = sqldb.query("canciones", datosARecuperar, null, null, null, null, null, null);
+
+        artistas = new ArrayList<>();
+
+        if (cursor.moveToFirst()){
+            do{
+                String nombre = cursor.getString(0);
+                System.out.println(nombre);
+                artistas.add(new Artista(nombre));
+            }while (cursor.moveToNext());
+        }
 
 
-        Cursor cursor2 = sqldb.rawQuery("SELECT * FROM canciones", null);
 
-
-
-
-        int codigo = cursor2.getInt(0);
-        String nombre = cursor2.getString(2);
-
-        artistas.add(new Artista(nombre));
-
-        cursor2.close();//siempre hay que cerrar el cursor...
+        cursor.close();//siempre hay que cerrar el cursor...
 
 
 
